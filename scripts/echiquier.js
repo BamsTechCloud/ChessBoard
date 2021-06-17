@@ -12,24 +12,24 @@ for( x = 0 ; x < size ; x++) {
 }
 console.log(ouput);
 
-var chessBoard= '',
-    sizes= 8,
-    c;
-
-for(var i = 0 ; i < sizes ; i++) {
-  c= i%2 ? '# ' : ' #';
-  for(var j = 0 ; j < sizes/2 ; j++) {
-    chessBoard+= c;
-  }
-  chessBoard+= '\n';
+let chessboard = "";
+let sizes = 8;
+let conditionTernaire;
+for(let x_offset = 0 ; x_offset < sizes ; x_offset++) {
+    conditionTernaire = (x_offset % 2) ? "# " : " #";
+    for(let y_offset =0 ; y_offset < sizes/2 ; y_offset++) {
+        chessboard += conditionTernaire;
+    }
+    chessboard += "\n";
 }
 
-console.log(chessBoard);
-
+console.log(chessboard);
 /*let board = "";
+let condition;
 for(let a = 0 ; a < 8 ; a++) {
-    for(let b = 0 ; b < 8 ; 8++) {
-        board += (a % 2) == (b % 2) ? " " : "#";
+    condition = (a % 2) ? " " : "#";
+    for(let b = 0 ; b < 8/2 ; 8++) {
+        board += condition;
     }
     board += "\n";
 }
