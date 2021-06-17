@@ -12,7 +12,21 @@ for( x = 0 ; x < size ; x++) {
 }
 console.log(ouput);
 
-let board = "";
+var chessBoard= '',
+    sizes= 8,
+    c;
+
+for(var i = 0 ; i < sizes ; i++) {
+  c= i%2 ? '# ' : ' #';
+  for(var j = 0 ; j < sizes/2 ; j++) {
+    chessBoard+= c;
+  }
+  chessBoard+= '\n';
+}
+
+console.log(chessBoard);
+
+/*let board = "";
 for(let a = 0 ; a < 8 ; a++) {
     for(let b = 0 ; b < 8 ; 8++) {
         board += (a % 2) == (b % 2) ? " " : "#";
@@ -21,3 +35,4 @@ for(let a = 0 ; a < 8 ; a++) {
 }
 
 console.log(board);
+*/
